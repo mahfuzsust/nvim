@@ -1,3 +1,4 @@
+let mapleader = "\<Space>"
 
 nnoremap <silent> <C-f> :Rg<CR>
 nnoremap <silent> <C-b> :Buffers<cr>

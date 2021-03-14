@@ -1,3 +1,8 @@
+set grepprg=rg\ --vimgrep\ --smart-case\ --hidden\ --follow
+
+set updatetime=100
+filetype plugin on
+
 " General settings {{{
 " ====================================================================
 set splitright
@@ -7,7 +12,7 @@ set relativenumber " use relative lines numbering by default
 set noswapfile     " disable creating of *.swp files
 set hidden         " hide buffers instead of closing
 set lazyredraw     " speed up on large files
-set mouse=         " disable mouse
+set mouse=a        " disable mouse
 
 set scrolloff=999       " always keep cursor at the middle of screen
 set virtualedit=onemore " allow the cursor to move just past the end of the line

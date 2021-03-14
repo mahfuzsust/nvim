@@ -1,57 +1,53 @@
-set iskeyword+=-                      	" treat dash separated words as a word text object"
-set formatoptions-=cro                  " Stop newline continution of comments
+" General settings {{{
+" ====================================================================
+set splitright
+set clipboard=unnamed,unnamedplus
+set number         " show line numbers
+set relativenumber " use relative lines numbering by default
+set noswapfile     " disable creating of *.swp files
+set hidden         " hide buffers instead of closing
+set lazyredraw     " speed up on large files
+set mouse=         " disable mouse
 
-syntax enable                           " Enables syntax highlighing
-set hidden                              " Required to keep multiple buffers open multiple buffers
-set nowrap                              " Display long lines as just one line
-set whichwrap+=<,>,[,],h,l
-set encoding=utf-8                      " The encoding displayed
-set pumheight=10                        " Makes popup menu smaller
-set fileencoding=utf-8                  " The encoding written to file
-set ruler              			            " Show the cursor position all the time
-set cmdheight=2                         " More space for displaying messages
-set mouse=a                             " Enable your mouse
-set splitbelow                          " Horizontal splits will automatically be below
-set splitright                          " Vertical splits will automatically be to the right
-set t_Co=256                            " Support 256 colors
-set conceallevel=0                      " So that I can see `` in markdown files
-set tabstop=2                           " Insert 2 spaces for a tab
-set shiftwidth=2                        " Change the number of space characters inserted for indentation
-set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
-set expandtab                           " Converts tabs to spaces
-set smartindent                         " Makes indenting smart
-set autoindent                          " Good auto indent
-set laststatus=2                        " Always display the status line
-set number                              " Line numbers
-set cursorline                          " Enable highlighting of the current line
-set background=dark                     " tell vim what the background color looks like
-set showtabline=2                       " Always show tabs
-set noshowmode                          " We don't need to see things like -- INSERT -- anymore
-set nobackup                            " This is recommended by coc
-set nowritebackup                       " This is recommended by coc
-set shortmess+=c                        " Don't pass messages to |ins-completion-menu|.
-set signcolumn=yes                      " Always show the signcolumn, otherwise it would shift the text each time
-set updatetime=300                      " Faster completion
-set timeoutlen=100                      " By default timeoutlen is 1000 ms
-set clipboard=unnamedplus               " Copy paste between vim and everything else
-set incsearch
-set guifont=JetBrainsMono\ Nerd\ Font
+set scrolloff=999       " always keep cursor at the middle of screen
+set virtualedit=onemore " allow the cursor to move just past the end of the line
+set undolevels=5000     " set maximum undo levels
 
-" New stuff
-" set notimeout nottimeout
-" set scrolloff=1
-" set sidescroll=1
-" set sidescrolloff=1
-" set display+=lastline
-" set backspace=eol,start,indent
-" set nostartofline
-" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-" set mmp=1300
-" set autochdir                           " Your working directory will always be the same as your working directory
-" set foldcolumn=2                        " Folding abilities
+" ! save global variables that doesn't contains lowercase letters
+" h disable the effect of 'hlsearch' when loading the viminfo
+" f1 store marks
+" '100 remember 100 previously edited files
+set viminfo=!,h,f1,'100
 
-" au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+set foldmethod=manual       " use manual folding
+set diffopt=filler,vertical " default behavior for diff
 
-" You can't stop me
-cmap w!! w !sudo tee %
+" ignore pattern for wildmenu
+set wildignore+=*.a,*.o,*.pyc,*~,*.swp,*.tmp
+set wildmode=list:longest,full
+
+set list " show hidden characters
+set listchars=tab:•·,trail:·,extends:❯,precedes:❮,nbsp:×
+
+set laststatus=2 " always show status line
+set showcmd      " always show current command
+
+set nowrap        " disable wrap for long lines
+set textwidth=0   " disable auto break long lines
+" }}}
+" Indentation {{{
+" ====================================================================
+set expandtab     " replace <Tab with spaces
+set tabstop=2     " number of spaces that a <Tab> in the file counts for
+set softtabstop=2 " remove <Tab> symbols as it was spaces
+set shiftwidth=2  " indent size for << and >>
+set shiftround    " round indent to multiple of 'shiftwidth' (for << and >>)
+" }}}
+" Search {{{
+" ====================================================================
+set ignorecase " ignore case of letters
+set smartcase  " override the 'ignorecase' when there is uppercase letters
+set gdefault   " when on, the :substitute flag 'g' is default on
+" }}}
+"
+

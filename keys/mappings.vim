@@ -6,8 +6,8 @@ nnoremap <silent> cc :Commits<cr>
 nnoremap <silent> ff :BLines<CR>
 nnoremap <silent> tt :Windows<CR>
 nnoremap <silent> comm :Commands<CR>
-nnoremap <silent> <C-m> :Marks<CR>
-nnoremap <silent> <C-t> :call fzf#run({
+nnoremap <silent> <leader>m :Marks<CR>
+nnoremap <silent> <leader>t :call fzf#run({
 \   'right': winwidth('.') / 2,
 \   'sink':  'vertical botright split' })<CR>
 
@@ -31,6 +31,7 @@ nnoremap <C-n> :call MyNerdToggle()<CR>
 nnoremap <silent> <leader>gs :Gstatus<CR>
 nnoremap <silent> <leader>gd :Gdiff<CR>
 nnoremap <silent> <leader>gc :Gcommit<CR>
+nnoremap <silent> <leader>gp :Gpush<CR>
 nnoremap <silent> <leader>gb :Gblame<CR>
 nnoremap <silent> <leader>ge :Gedit<CR>
 nnoremap <silent> <leader>gE :Gedit<space>

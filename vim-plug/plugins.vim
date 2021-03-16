@@ -9,7 +9,6 @@ Plug 'mhinz/vim-signify'
 Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
 Plug 'drewtempelmeyer/palenight.vim'
-"Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'MattesGroeger/vim-bookmarks'
@@ -21,6 +20,8 @@ Plug 'chun-yang/auto-pairs'
 Plug 'airblade/vim-rooter'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'joshdick/onedark.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
 source $HOME/.config/nvim/vim-plug/config/init.vim

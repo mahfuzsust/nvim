@@ -1,7 +1,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-fugitive'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'mhinz/vim-signify'
@@ -17,8 +16,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'chun-yang/auto-pairs'
 Plug 'airblade/vim-rooter'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'joshdick/onedark.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 source $HOME/.config/nvim/vim-plug/config/init.vim
